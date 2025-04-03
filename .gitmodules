@@ -1,0 +1,3 @@
+[submodule "APIMacros"]
+	path = APIMacros
+	url = https://github.com/IHateGameDev/APIMacros.git
