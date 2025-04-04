@@ -2,6 +2,7 @@
 #define SFDL_EXTENSION_H
 
 #include "APIMacros/stdint/conf.h"
+#include "APIMacros/useful.h"
 
 #ifndef API_NI_STDINT_H
 # include API_STDINT_H
@@ -33,8 +34,9 @@ typedef struct SFDLExtension {
 typedef struct {
   SFDLExtension* exts;
   API_U8 count;
+  mlocal void* library;
 } SFDLExtensionsData;
 
-typedef SFDLExtensionsData*(*setupExtFn)(void);
+typedef void(*setupExtFn)(SFDLExtensionsData*);
 
 #endif // !SFDL_EXTENSION_H

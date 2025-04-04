@@ -4,8 +4,8 @@
 #include "Extension.h"
 #include "APIMacros/api.h"
 
-API SFDLExtensionsData sfdlExtensionLoad(const char* path);
-API void sfdlExtensionFree(SFDLExtension* self);
-API void sfdlEXtensionsDataFree(SFDLExtensionsData* self);
+API SFDLExtensionsData* sfdlExtensionsDataNew();
+API void sfdlExtensionsDataLoad(SFDLExtensionsData* self, const char* path);
+API void sfdlExtensionsDataFree(SFDLExtensionsData* self);
 
 #endif // !SFDL_EXTENSION_MANAGER_H
